@@ -3,5 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/loop_website/'
+  base: process.env.NODE_ENV === 'production' ? '/loop_website/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 });
