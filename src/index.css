@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #05010f;
+  color: #f8f9ff;
+}
+
+body,
+html {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background-color: #05010f;
+  color: #f8f9ff;
+}
+
+#root {
+  flex: 1;
+  background-color: #05010f;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.app-shell--masked {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-stage {
+  position: relative;
+  height: 100vh;
+}
+
+.bubble-logo-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #05010f;
+  z-index: 200;
+  transition: opacity 0.7s ease;
+}
+
+.intro-overlay--hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-logo {
+  width: clamp(200px, 24vw, 360px);
+  height: auto;
+  max-width: 65vw;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35));
+}
