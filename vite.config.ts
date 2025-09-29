@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/loop_website/',
+  base: '/loop-website/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
